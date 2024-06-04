@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAGdJREFUOE+tU1sOwCAIK/c/NAskyHRmKSIfhvAsRQQp+tIZVSzIHwDV5GggVmBKVlWImzm5V8A6rxJI/nz3EET3NgccdRn1GeG4wAp9N8rONiGIgAoP1BboNbYQdDhoH9P4Q8UV+sU9+jlGBU1aFBcAAAAASUVORK5CYII=">
+    <script>
+const ROMDATA = {
+    5318008: ([][[]]+[])[+!![]]+(!![]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+[]]]+(+(+!![]+[+!![]]+(!![]+[])[!![]+!![]+!![]]+(!![]+!![])+(+[]))+[])[+!![]],
+    58008: ([+[]]+![]+([]+[])[([]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[!![]+!![]+!![]]+(!![]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+[]]]+([][[]]+[])[+!![]]+(![]+[])[!![]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[!![]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+[]]]+(!![]+[])[+!![]]])[!![]+!![]+[+[]]]+(!![]+[])[!![]+!![]+!![]]+(!![]+[])[+[]]+(+[![]]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+!![]]]+(![]+[])[+!![]]+(+[![]]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+!![]]]+(![]+[])[!![]+!![]]+([![]]+[][[]])[+!![]+[+[]]]+(![]+[])[+[]]+(!![]+[])[!![]+!![]+!![]],
+    7734: (+(+!![]+[+[]]+(!![]+!![]+!![]+!![]+!![]+!![]+!![])+(+!![])+(+!![])+(!![]+!![]+!![])+(!![]+!![])))[(!![]+[])[+[]]+(!![]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+[]]]+([]+[])[([]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[!![]+!![]+!![]]+(!![]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+[]]]+([][[]]+[])[+!![]]+(![]+[])[!![]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[!![]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+[]]]+(!![]+[])[+!![]]][([][[]]+[])[+!![]]+(![]+[])[+!![]]+([]+(+[])[([]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[!![]+!![]+!![]]+(!![]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+[]]]+([][[]]+[])[+!![]]+(![]+[])[!![]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[!![]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+[]]]+(!![]+[])[+!![]]])[+!![]+[+!![]]]+(!![]+[])[!![]+!![]+!![]]]](!![]+!![]+!![]+[!![]+!![]+!![]+!![]+!![]+!![]])+([][[]]+[])[+[]]+(![]+[])[!![]+!![]+!![]]+(!![]+[])[!![]+!![]+!![]]+(+(+!![]+[+!![]]+(!![]+[])[!![]+!![]+!![]]+(!![]+!![])+(+[]))+[])[+!![]]+([]+[][(![]+[])[+!![]]+(!![]+[])[+[]]][([]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[!![]+!![]+!![]]+(!![]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+[]]]+([][[]]+[])[+!![]]+(![]+[])[!![]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[!![]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+[]]]+(!![]+[])[+!![]]]((!![]+[])[+!![]]+(!![]+[])[!![]+!![]+!![]]+(!![]+[])[+[]]+([][[]]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+!![]]+(+[![]]+[][(![]+[])[+!![]]+(!![]+[])[+[]]])[+!![]+[+!![]]]+(![]+[])[!![]+!![]+!![]]+(!![]+[])[!![]+!![]+!![]]+(![]+[])[!![]+!![]]+(![]+[])[+[]])())[+!![]+[!![]+!![]+!![]]]+(![]+[])[+!![]]+([][[]]+[])[!![]+!![]],
+    14: +[]+[!![]+!![]+!![]+!![]+!![]+!![]+!![]]+(!![]+!![]+!![]+!![]+!![]+!![]+!![])+(!![]+!![]+!![])+(!![]+!![]+!![]+!![])
+}
+    </script>
     <style>
         body, html {
             height: 100%;
             width: 100%;
             margin: 0;
-            zoom: 250%;
         }
 
         @font-face {
@@ -43,11 +51,9 @@
             background-color: #c4c4c4;
         }
         main > div > button:active {
-            width: 25%;
-            font-family: monospace;
             border: inset 2px;
         }
-        main > div > output {
+        output {
             font-family: "calculator";
             border: inset 2px;
             width: 100%;
@@ -58,12 +64,23 @@
             box-shadow: #00000080 0px 0px 6px inset;
             padding: 4px;
         }
+        pre {
+            position: fixed;
+            top: -14px;
+            left: 0;
+            background-color: black;
+            opacity: 100%;
+            color: white;
+        }
     </style>
 </head>
 <body>
+    <!-- debug menu, shows calculator "RAM", change opacity of pre in stylesheet above to show -->
+    <pre></pre>
+    
     <main>
         <div>
-            <output></output>
+            <output>0</output>
         </div>
         <div>
             <button style="width: 50%;">CE/ON</button>
@@ -95,33 +112,89 @@
     </main>
     
     <script>
-const display = document.querySelector("output")
+const display = document.querySelector("output");
+const debug = document.querySelector("pre");
 
 var calculator = {
-    on: false,
+    on: true,
     operator: "",
     value: 0,
-}
-
-const actions = {
-    "CE/ON": ()=>{
-        display.textContent = "0";
-        calculator.off = false;
-    },
-    "OFF": ()=>{
-        display.textContent = "";
-        calculator.on = false;
-    }
+    state: "value"
 }
 
 for (let button of document.querySelectorAll("main > div > button")) {
     button.addEventListener("click", () => {
-        let action = actions[button.textContent];
-        if (action) {
-            action();
-        } else {
-            display.textContent += button.textContent;
+        if (button.textContent == "CE/ON") {
+            calculator.on = true;
+            calculator.operator = "";
+            display.textContent = 0;
+
+        } else if (calculator.on) {
+            if (button.textContent == "OFF") {
+                calculator.on = false;
+                display.textContent = "";
+
+            // operators
+            } else if ("+-*/".includes(button.textContent)) {
+                calculator.value = +display.textContent;
+                calculator.operator = button.textContent;
+                calculator.state = "operation";
+
+            // numbers
+            } else if ("0123456789".includes(button.textContent)) {
+                // allow overwrite when on specific state
+                if (display.textContent == "0" || calculator.state == "answer" || calculator.state == "operation") display.textContent = "";
+                if (calculator.state == "answer") calculator.operator = "";
+                calculator.state = "value";
+                display.textContent += button.textContent;
+
+            // equal
+            } else if (button.textContent == "=") {
+                // ignore calculation if no operator
+                if (calculator.operator == "") {
+                    let temp = ROMDATA[display.textContent];
+                    if (temp) display.textContent = temp;
+                    return;
+                }
+
+                let temp;
+                if (calculator.state == "value")
+                    temp = display.textContent;
+
+                if (calculator.operator == "+")
+                    display.textContent = calculator.value + Number(display.textContent);
+                if (calculator.operator == "-")
+                    display.textContent = calculator.value - Number(display.textContent);
+                if (calculator.operator == "*")
+                    display.textContent = calculator.value * Number(display.textContent);
+                if (calculator.operator == "/")
+                    display.textContent = Math.floor(calculator.value / Number(display.textContent));
+
+                if (calculator.state == "value")
+                    calculator.value = +temp;
+
+                calculator.state = "answer";
+
+                if (["Infinity", "NaN", "ERR"].includes(display.textContent))
+                    display.textContent = "ERR";
+
+            // some nonexistant key is pressed
+            } else {
+                display.textContent = "congratulations you broke it";
+            }
+
+            // overflow error (idk)
+            if (display.textContent >= 1e+14) {
+                if (calculator.state == "answer")
+                    display.textContent = "ERR";
+                else
+                    display.textContent = 1e+14 - 1;
+            }
+
         }
+        let temp = calculator;
+        temp["display"] = display.textContent;
+        debug.textContent = JSON.stringify(calculator, null, " ");
     });
 }
     </script>
